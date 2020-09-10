@@ -5,7 +5,7 @@
 
 * [Ön hazırlık](#ön-hazırlık)
 * [Merhaba Dünya!](#merhaba-dünya) 
-* 1 - Veri tipleri (Data Types): primitif veri tiplerine (Primitive Data Types) giriş.
+* [1 - Veri tipleri (Data Types): primitif veri tiplerine (Primitive Data Types) giriş.](#1-veri-tipleri-data-types-primitif-veri-tiplerine-primitive-data-types-giriş)
 * 2 - Koşullar (Conditions)
 * 3 - Döngüler (Loops)
 * 4 - Fonksiyonlar (Functions)
@@ -73,7 +73,61 @@ print("merhaba") # konsola merhaba yazdırır
 
 <b> Yorumlar (Comments) </b> <br/>
 Yukarıdaki kodda print ifadelerinin hemen sonrasında # ile başlayan belli ifadeler var. Bu ifadeler ne anlama geliyor? Bu ifadeler bilgisayar açısından hiçbir anlama gelmiyor. Bilgisayar otomatik olarak satır içerisinde # sonrasında gelen ifadeleri görmezden geliyor. Peki bilgisayar bu ifadeleri görmezden geliyorsa niye böyle bir şey var? Kodumuzu insanlar için daha anlaşılır kılmak için. Başlangıçta anlamsız gözükse de projeleriniz ve kodlarınız karmaşıklaştıkça yorumlar, koddaki niyetlerinizin ve mantığınızın anlaşılmasını çok büyük oranda kolaylaştırır. 
+
+Satırları ard arda olacak şekilde yorumlamak istiyorsanız, # kullanmak yerine """ da kullanabilirsiniz.
+
+ ```python
+# bu bir single-line comment
+
+"""
+bu ise multi-line comment
+bu tirnak isaretleri arasında oldugu sürece istedigimiz kadar yorum yapabiliriz
+"""
+```
  
 # 1-Veri tipleri (Data Types): primitif veri tiplerine (Primitive Data Types) giriş.
 
+Hem hayatımızda hem de programlamada bir sürü faklı türde bilgi mevcuttur. Bu farklı türdeki bilgileri, yapısı bakımından karakterize etmemiz iletişimde kolaylık sağlar. Örneğin gazete okurken sayfalar içerdikleri verinin yani bilginin türüne göre sınıflandırılır, bazı bilgiler finansal bilgi olarak sayılırken bazıları magazin bilgisi şeklinde tanımlanabilir. Benzer bir ayrım programlamada da vardır ve uğraştığımız bilginin türüne göre farklı veri tiplerini kullanırız. Örneğin yazı bilgisi içeren verileri ifade etmeye çalışırken string denilen bir veri tipini kullanırız, sayısal verileri ifade etmek için integer, veya float denilen veri tiplerini kullanırız. Uzun lafın kısası, farklı veri tiplerinin varlığı uğraştığımız verinin doğasına göre bize kolaylık sağlar.
+
+Python'da veri tiplerini basitçe iki ayrı sınıfa ayırabiliriz: Değiştirilebilir (Mutable) ve Değiştirilemez (Immutable) veriler. Temel olarak, immutable verileri, üzerinde değişiklik yapamayacağımız kendi başına temel-primitif değerler olan veri tipleri şeklinde düşünebiliriz, mutable verileri ise üstünde değişiklik yapabildiğimiz, kendi değerini değiştirebildiğimiz veriler olarak düşünebiliriz.
+
+Bu şimdilik bir şey ifade etmeyebilir, ancak mutable objeleri gördüğümüzde her şey daha açık bir hale gelecek.
+
+Şimdilik immutable data tipinde olan, temel verileri inceleyelim. 
+
+#### String
+Bu veri tipi yazı türünden bilgileri ifade etmede kullanılır. İki tırnak işareti " arasında yazılarak ifade edilir. Python'da "merhaba" yazdığınızda Python'ın bu ifadeyi merhaba yazısı şeklinde algılıyor gibi düşünebiliriz. Öte yandan merhaba yazacak olsaydık Python bu isimde bir değişken arayıp (bunun ne olduğunu açıklayacağız) eğer tanımlanmamışsa hata verirdi.
+
+#### Number
+Bu veri tipi sayıları ifade etmek için kullanılıyor. Ondalıklı sayıları 2.3434 şeklinde ifade edebileceğimiz gibi tam sayıları da 5, -4 vs. şeklinde ifade edebiliriz.
+
+#### Boolean
+Bu veri tipi yalnızca iki değerden oluşuyor: True ve False. Özünde bu veri tipi lisede mantık dersinde gördüğünüz önermesel mantıktaki 0 ve 1, doğru ve yanlış ifadelerine denktir. Boolean verilerinin amacı belirli koşulları kontrol etmemizi sağlaması, koşullu işlemlerde kolaylık sağlamasıdır.
+
+## Veriler ile yapabileceğimiz işlemler
+Nasıl ki sayılarda işlem yapabiliyorsak (ki bunu da işleyeceğiz), yukarıda saydığım (ve saymadığım) veri tiplerinin de kendilerine ait işlemleri vardır. Number veri tipindeki verilerdeki işlemler esasında bildiğimiz aritmetik işlemlere tekabül ettiğinden bunlar anlaşılması en kolay olan işlemlerdir ancak String ve Boolean veri tiplerinin de kendilerine has işlemleri vardır. 
+
+ ```python
+# arithmetic expressions
+print( 3 + 5) # 8
+print( 3 - 2) # 1
+print( 5 * 2) # 10
+print( 5 ** 2) # 5^2 -> 25
+print( 10 % 3) # 5 mod 3 -> 2
+print( 5 / 2 ) # 5 / 2 -> 2.5
+print( 5 // 2) # 5 // 2 = 2
+
+# string expressions
+print( "asd") # asd
+print("asd" + "dsa") # "asddsa"
+print("asd" * 5) # "asdasdasdasdasd"
+
+# boolean expression
+print( True) # True
+print( False) # False
+
+```
+Sayıların aritmetiği olduğu gibi, boolean'ların da kendine has bir aritmetiği, operatörleri vardır (ve, veya, ya da, eşittir operatörleri gibi) boolean arithmetiği denilen bu aritmetiği ileride göreceğiz.
+
+## Değişkenler
 
