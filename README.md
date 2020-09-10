@@ -192,4 +192,47 @@ kod yazarken sabit değerler kullanmaktan olabildiğince kaçınmak, modülarite
 
 ## if elif else
 
+# 3 - Döngüler (Loops)
 
+Programlama yaparken çoğu zaman kendini belirli bir düzene göre tekrarlayan bir takım işleri yapmamız gerekir. Örneğin 10 kere aynı değeri printlemek istersek 10 kere print ifadesini tekrarlayabiliriz, 1'den 10'a kadar olan değerleri konsola çıkartmak istersek teker teker print(1), print(2) vs. şeklinde tüm bu değerleri printleyebiliriz. Ancak fark edileceği yapılması gereken tekrar sayısı arttıkça bu işi manüel olarak yapmamız da bir o kadar zorlaşacak. Ayrıca bir noktadan sonra kendini tekrar eden bu kodlar kodumuzun çirkin gözükmesine neden olacak. İşte tam olarak bu noktada döngü dediğimiz şey devreye giriyor.
+
+Şimdilik döngü yapmamızı sağlayacak iki sentaks var. Bunlardan ilki while loop ikincisi ise for loop olarak geçer.
+
+## while-loop sentaksı
+
+ ```python
+while boolean_değeri:
+    ifade1
+    ifade2
+    ...
+    ifade_n
+```
+
+yukarıdaki ifadede boolean_değeri'nin değeri True olduğu müddetçe while loop'u tarafından kapsanan ifadeler tekrar tekrar çalışmaya devam eder.
+
+## for-loop sentaksı
+
+ ```python
+ 
+ for i in range(iterasyon_sayisi):
+     ifade1
+     ifade2
+     ...
+     ifade_n
+```
+
+yukarıdaki ifadede i değeri iterasyon_sayisi'na ulaşak şekilde her bir iterasyon sonunda değerini 1 arttırır ve değeri iterasyon_sayisi kısmındaki değere ulaştığında iterasyon durur. 
+
+## örnek
+
+Aşağıda 1'den 10'a kadar sayan, tam olarak aynı işi yapan while ve for döngülerini görüyoruz. Çoğu durumda while ve for döngüleri dönüşümlü olarak kullanılabilir.
+
+ ```python
+count = 0;
+limit = 10;
+while count < limit:
+  print("iteration number: " + str(count) )
+  count = count + 1
+
+for i in range(10):
+  print(i)
