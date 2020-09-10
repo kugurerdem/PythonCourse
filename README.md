@@ -3,7 +3,7 @@
 
 # İzlence
 
-* Ön hazırlık
+* [Ön hazırlık](#ön-hazırlık0)
 * 1 - Veri tipleri (Data Types): primitif veri tiplerine (Primitive Data Types) giriş.
 * 2 - Koşullar (Conditions)
 * 3 - Döngüler (Loops)
