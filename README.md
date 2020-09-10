@@ -142,6 +142,17 @@ a = 7 # a kutusunun icindeki verinin yani 5'in yerine 7 değerini koyduk.
 print( a) # 7
 ```
 
+<b> Önemli not </b>
+
+Değişken tanımlarken kullandığımız = ifadesi, fark ettiğiniz üzere matematikte kullandığımız = ifadesinden farklı bir şekilde işliyor. Yukarıda önce a = 5 deyip hemen ardından a = 7 dedik, burada kafası karışan okuyucu "5 = 7 değil ki?" türünden bir tepki verebilir ancak Python'da (ve neredeyse diğer tüm programlama dillerinde) = ifadesi bir şeyin eşit olduğunu söylemekten ziyade bir şeyin değerini (soldaki değişkenin) güncellemek için kullanılır. Bu sayede yukarıdaki gibi ifadeler kurabiliyoruz. Hatta ifadenin değerini kendisine bağlı olacak şekilde de güncelleyebiliriz. Bu, özellikle bir şeyleri saymamız gerektiğinde çok işe yarayacak.
+
+ ```python
+yas = 16 
+print( yas) 
+yas = yas + 1
+print( yas)
+```
+
 Değişkenlerin bir diğer artısı ise kendisini çok fazla tekrar eden, ya da bir sürü yerde kullanılan verileri değiştirmemiz gerektiğinde bu değiştirme işlemini inanılmaz ölçüde kolaylaştırabilmesidir. 
 
 Diyelim ki bir işlem yapıyorsunuz ve yaptığınız işlemde PI sayısını 3 olarak kabul ederek bir sürü farklı hesap yapıyorsunuz.
@@ -170,3 +181,5 @@ print( PI * 7 * 7) # alan
 ```
 
 kod yazarken sabit değerler kullanmaktan olabildiğince kaçınmak, modülarite ve kodun esnekliği (güzelliği) açısından oldukça önemlidir. Yukarıdaki kodda PI değerini değiştirmek istediğimizde rahatlıkla değişkenin kendisini değiştirip kodun diğer kısmı ile uğraşmaktan kurtulabilirdik.
+
+
