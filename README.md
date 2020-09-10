@@ -131,3 +131,42 @@ Sayıların aritmetiği olduğu gibi, boolean'ların da kendine has bir aritmeti
 
 ## Değişkenler
 
+Normalde çoğu işi yaparken bir çeşit hafızaya ihtiyaç duyarız. Örneğin içinde olduğumuz yılı sorduğunuzda hafızama dayanır, 2020 (şuan bunu yazdığım tarih) verisine ulaşır ve bunu size yanıt olarak söylerim. Benzer bir hafıza sistemine programlamada da ihtiyaç duyarız, değişken dediğimiz şey de tam olarak bu işe yarar.
+
+Değişkenler bir nevi bilgilerimizi içine koyabildiğimiz kutular gibi işler. Bu kutunun içine istediğiniz veriyi koyabilir, istediğiniz zaman kutunun içindeki içeriği çıkarıp yerine başka şeyler koyabilir ya da kutunun içindeki verinin türüne göre (eğer mutable ise) verinin kendisini değiştirebilirsiniz. 
+
+ ```python
+a = 5 # a diye bir değişken tanımladık ve değişkenin (kutunun) içine 5 verisi koyduk
+print( a) # a yazdığımızda kutunun içindeki veriyi çekiyoruz, print fonksiyonun içine a'nın içindeki değeri 5'i koymuş olduk
+a = 7 # a kutusunun icindeki verinin yani 5'in yerine 7 değerini koyduk.
+print( a) # 7
+```
+
+Değişkenlerin bir diğer artısı ise kendisini çok fazla tekrar eden, ya da bir sürü yerde kullanılan verileri değiştirmemiz gerektiğinde bu değiştirme işlemini inanılmaz ölçüde kolaylaştırabilmesidir. 
+
+Diyelim ki bir işlem yapıyorsunuz ve yaptığınız işlemde PI sayısını 3 olarak kabul ederek bir sürü farklı hesap yapıyorsunuz.
+
+ ```python
+# yaricapi 4 olan cember icin cevre ve alan hesapları
+print( 2 * 3 * 4) # cevre
+print( 3 * 4 * 4) # alan
+
+# yaricapi 7 olan cember icin cevre ve alan hesapları
+print( 2 * 3 * 7) # cevre
+print( 3 * 7 * 7) # alan
+```
+
+şimdi de diyelim ki PI'yi 3 almaktan memnun değilsiniz ve daha net bir cevap istiyorsunuz, bu nedenden dolayı da pi'yi 3.14 olacak şekilde değiştirmek istiyorsunuz. Bu durumda yukarıdaki her 3 sayısını teker teker 3.14 ile değiştirmeniz gerekirdi. Başta bu kısa ve kolay gözükse de kodunuz uzadıkça ve işlem sayınız arttıkça 3'leri takip etmek gittikçe zorlaşacaktır. Bunun yerine en başından PI'yi belirtecek bir değişken oluştursak ve 3 yerine PI değişkenini kullansak kodda değişiklik yapmamız çok daha kolay olurdu.
+
+ ```python
+PI = 3
+# yaricapi 4 olan cember icin cevre ve alan hesapları
+print( 2 * PI * 4) # cevre
+print( PI * 4 * 4) # alan
+
+# yaricapi 7 olan cember icin cevre ve alan hesapları
+print( 2 * PI * 7) # cevre
+print( PI * 7 * 7) # alan
+```
+
+kod yazarken sabit değerler kullanmaktan olabildiğince kaçınmak, modülarite ve kodun esnekliği (güzelliği) açısından oldukça önemlidir. Yukarıdaki kodda PI değerini değiştirmek istediğimizde rahatlıkla değişkenin kendisini değiştirip kodun diğer kısmı ile uğraşmaktan kurtulabilirdik.
