@@ -182,4 +182,7 @@ print( PI * 7 * 7) # alan
 
 kod yazarken sabit değerler kullanmaktan olabildiğince kaçınmak, modülarite ve kodun esnekliği (güzelliği) açısından oldukça önemlidir. Yukarıdaki kodda PI değerini değiştirmek istediğimizde rahatlıkla değişkenin kendisini değiştirip kodun diğer kısmı ile uğraşmaktan kurtulabilirdik.
 
+# 2 - Koşullar (Conditions)
+
+
 
