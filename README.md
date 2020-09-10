@@ -6,8 +6,8 @@
 * [Ön hazırlık](#ön-hazırlık)
 * [Merhaba Dünya!](#merhaba-dünya) 
 * [1 - Veri tipleri (Data Types): primitif veri tiplerine (Primitive Data Types) giriş.](#1-veri-tipleri-data-types-primitif-veri-tiplerine-primitive-data-types-giriş)
-* 2 - Koşullar (Conditions)
-* 3 - Döngüler (Loops)
+* [2 - Koşullar (Conditions)](#2---koşullar-conditions)
+* [3 - Döngüler (Loops)](#3---döngüler-loops)
 * 4 - Fonksiyonlar (Functions)
 * 5 - Etki alanı - kapsam (Scoping)
   * Global değişkenler (Global Variables)
@@ -223,16 +223,18 @@ koşulun doğru olduğu durumda if tarafından kapsanan ifadeleri çalıştırı
 
 ## if elif else
 
+koşulun doğru olmadığı durumda ayrı bir koşulu (koşul2) kontrol etmek için kullanılır. 
+
  ```python
 if koşul:
     ifadeler
 elif koşul2:
-    ifadeler2
+    ifadeler
 else:
     ifadeler
 ```
 
-if'in doğru olmadığı durumda ayrı bir koşulu kontrol etmek için kullanılır. if ve else arasında istenildiği kadar elif ifadesi koyulabilir.
+Eğer koşul doğru değilse ve koşul2 doğru ise elif koşul2 tarafından kapsanan ifadeler çalıştırılır. Eğer koşul2 de yanlışsa else tarafından kapsanan ifadeler çalıştırılır. 
 
 # 3 - Döngüler (Loops)
 
