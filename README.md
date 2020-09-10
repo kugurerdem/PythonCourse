@@ -184,13 +184,55 @@ kod yazarken sabit değerler kullanmaktan olabildiğince kaçınmak, modülarite
 
 # 2 - Koşullar (Conditions)
 
-## Boolean Arithmetic
+Hayatta çoğu zaman koşullara göre hareket ederiz, belli durumlarda belli kararlar alır ve onları uygularız. Benzer bir şeye programlamada da ihtiyaç duyarız. En basitinden basit bir siteye giriş sırasında dahi yaşımıza göre siteye girip giremeyeceğimiz belirlenebilir. 
+
+Bilgisayar biliminde bu işi gören ifadelere koşullu (conditional) ifadeler diyoruz. Koşulların kendisi ise birçok şeye bağlı olabilir, esasında her bir koşul, önermelerde olduğu gibi "doğru" veya "yanlış" değerine sahiptir. Örneğin siteye "18 yaşından büyüğüm" ya da başka bir değişle "benim yaşım > 18" ifadesi doğru ise girerim. Burada "benim yaşım > 18" ifadesinin değeri doğrudur, yani aslında "benim yaşım > 18" ifadesi bir boolean değerine sahiptir ve o değer de Doğru'dur. Benzer bir şekilde bazen koşulumuzun kendisi birden fazla koşula bağlı olabilir, bazen bu koşulların birbirine göreli olarak doğru veya yanlış olmasına göre hareket etmek isteyebiliriz, işte bu tür durumların altından kalkmamızı sağlayan şeye boole aritmetiği denir. 
+
+## Boole Aritmetiği
+
+Boole aritmetiği esasında lisede öğrendiğimiz mantıksal operatörler ile yaptığımız işlemlerden oluşur. Bunlar "ve, veya, ancak ve ancak, ya da" gibi operatörler ile yapılan işlemlerdir.
+
+ ```python
+print( True) # True
+print( False) # False
+
+print("eq op: True == True is " + str(True == True) ) # True
+print("neq op: True != True is " + str(True != True) ) # False
+print("or op: True or False is " + str( True or False) ) # True
+print("or op: False or False is " + str(False or False) ) # False
+print("and op: True and False is " + str( True and False) ) # False
+```
 
 ## if
 
+ ```python
+if koşul:
+    ifadeler
+```
+koşulun doğru olduğu durumda if tarafından kapsanan ifadeleri çalıştırır. 
+
 ## if else
 
+ ```python
+if koşul:
+    ifadeler
+else:
+    ifadeler
+```
+koşulun doğru olduğu durumda if tarafından kapsanan ifadeleri çalıştırır. Yanlış olduğu durumda else tarafından kapsanan ifadeleri çalıştırır.
+
 ## if elif else
+
+ ```python
+if koşul:
+    ifadeler
+elif koşul2:
+    ifadeler2
+else:
+    ifadeler
+```
+
+if'in doğru olmadığı durumda ayrı bir koşulu kontrol etmek için kullanılır. if ve else arasında istenildiği kadar elif ifadesi koyulabilir.
 
 # 3 - Döngüler (Loops)
 
@@ -223,7 +265,7 @@ yukarıdaki ifadede boolean_değeri'nin değeri True olduğu müddetçe while lo
 
 yukarıdaki ifadede i değeri iterasyon_sayisi'na ulaşak şekilde her bir iterasyon sonunda değerini 1 arttırır ve değeri iterasyon_sayisi kısmındaki değere ulaştığında iterasyon durur. 
 
-## örnek
+## Örnek
 
 Aşağıda 1'den 10'a kadar sayan, tam olarak aynı işi yapan while ve for döngülerini görüyoruz. Çoğu durumda while ve for döngüleri dönüşümlü olarak kullanılabilir.
 
