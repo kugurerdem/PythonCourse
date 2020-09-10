@@ -4,7 +4,7 @@
 # İzlence
 
 * [Ön hazırlık](#ön-hazırlık)
-* Merhaba Dünya! 
+* [Merhaba Dünya!](#merhaba-dünya) 
 * 1 - Veri tipleri (Data Types): primitif veri tiplerine (Primitive Data Types) giriş.
 * 2 - Koşullar (Conditions)
 * 3 - Döngüler (Loops)
