@@ -184,5 +184,12 @@ kod yazarken sabit değerler kullanmaktan olabildiğince kaçınmak, modülarite
 
 # 2 - Koşullar (Conditions)
 
+## Boolean Arithmetic
+
+## if
+
+## if else
+
+## if elif else
 
 
