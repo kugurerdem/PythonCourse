@@ -4,6 +4,7 @@
 # İzlence
 
 * [Ön hazırlık](#ön-hazırlık)
+* Merhaba Dünya! 
 * 1 - Veri tipleri (Data Types): primitif veri tiplerine (Primitive Data Types) giriş.
 * 2 - Koşullar (Conditions)
 * 3 - Döngüler (Loops)
@@ -53,4 +54,26 @@ Başlangıç için kurulumla uğraşmadan doğrudan repl.it üzerinden yazılabi
 Çoğu kütüphaneyi birlikte getirdiği ve güzel IDE'lere vs. sahip olduğu için Anaconda paketi ile birlikte indirilebilir (tavsiyem budur). <br/>
 Manüel olarak kurmak isteyenler Python'ın kendi sitesinden yükleyebilir. <br/>
 
+# Merhaba Dünya
+
+<b> Konsola! </b>
+
+```python
+print( "Merhaba Dünya!")
+```
+
+Yukarıdaki kodu çalıştırırsanız konsolda "Merhaba Dünya!" yazdığını görürsünüz. print esasında Python'ın bizim için sağladığı metotlardan birisidir ve parantez içine yazdığımız verileri konsola iletir, bu sayede verilerimizi kontrol edebilir, eğer uygulama konsolda çalışıyor ise kullanıcı ile etkileşime geçebiliriz.
+ 
+ Yukarıda print fonksiyonu içerisine doğrudan Merhaba Dünya yazmadığımızı fark etmişsinizdir. Bunun nedeni python'ın yazdığınız Merhaba ve Dünya kelimelerinin bir değişkene mi hitap ettiğini yoksa yazılması gereken bir şey mi olduğunu ayırt edememesi. Bunu ayırt etmek amacı ile kelime, yazı işlevi gören bilgi string adı verilen bir veri tipinde tutulur. Stringler ise " " veya ' ' işaretleri arasında tanımlanırlar. Örneğin a bir string değilken 'a' a yazısını gösteren bir stringdir. Önemli veri tiplerini ve temel ifadeleri ileriki bölümde inceleyeceğiz.
+ 
+ ```python
+print(merhaba) # yanlış
+print("merhaba") # konsola merhaba yazdırır
+```
+
+<b> Yorumlar (Comments) </b> <br/>
+Yukarıdaki kodda print ifadelerinin hemen sonrasında # ile başlayan belli ifadeler var. Bu ifadeler ne anlama geliyor? Bu ifadeler bilgisayar açısından hiçbir anlama gelmiyor. Bilgisayar otomatik olarak satır içerisinde # sonrasında gelen ifadeleri görmezden geliyor. Peki bilgisayar bu ifadeleri görmezden geliyorsa niye böyle bir şey var? Kodumuzu insanlar için daha anlaşılır kılmak için. Başlangıçta anlamsız gözükse de projeleriniz ve kodlarınız karmaşıklaştıkça yorumlar, koddaki niyetlerinizin ve mantığınızın anlaşılmasını çok büyük oranda kolaylaştırır. 
+ 
 # 1-Veri tipleri (Data Types): primitif veri tiplerine (Primitive Data Types) giriş.
+
+
