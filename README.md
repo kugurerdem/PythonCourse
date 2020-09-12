@@ -239,6 +239,10 @@ print("\"asda\" == \"asda\": ", ("asda" == "asda") ) # True
 print("\"ab\" < \"bb\":", ("ab" < "bb")) # True
 ```
 
+<b> Not (Escape character ve özel karakterler): </b> 
+
+Python'da stringlerin " " işaretleri arasında tanımlandığını belirtmiştik. Burada aklınıza şu soru takılabilir, eğer " işaretleri ile string tanımlıyorsak, " işaretinin kendisini içeren bir stringi nasıl yazabiliriz? 
+
 ## if
 
  ```python
