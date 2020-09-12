@@ -8,18 +8,17 @@
 * [1 - Veri tipleri (Data Types): primitif veri tiplerine (Primitive Data Types) giriş.](#1-veri-tipleri-data-types-primitif-veri-tiplerine-primitive-data-types-giriş)
 * [2 - Koşullar (Conditions)](#2---koşullar-conditions)
 * [3 - Döngüler (Loops)](#3---döngüler-loops)
-* String detayları
-* 4 - Fonksiyonlar (Functions)
-* 5 - Etki alanı - kapsam (Scoping)
-  * Global değişkenler (Global Variables)
-* 6 - Modüller (Modules), dosyalar (Files)
-* 7 - Referans Veri Tipi (Reference Data Type): Değiştirilebilir (mutable) data tipleri
-  * Diziler (Arrays) ve Çok Boyutlu Diziler (Multi-Dimensional Arrays)
-  * Listeler (Lists)
-  * Sözlükler (Dictionaries)
-* 8 - Yüksek derece fonksiyonlar (Higher-Order Functions)
-* 9 - Sınıflar (Classes) ve Obje Tabanlı Programlama (Object-Oriented Programming)
-* 10 - Numpy, matplotlib, pandas kütüphanelerine giriş
+* 4 - Fonksiyonlar (Functions) 
+* 5 - Etki alanı - kapsam (Scoping) 
+  * Global değişkenler (Global Variables) 
+* 6 - Modüller (Modules), dosyalar (Files) 
+* 7 - Referans Veri Tipi (Reference Data Type): Değiştirilebilir (mutable) data tipleri 
+  * Diziler (Arrays) ve Çok Boyutlu Diziler (Multi-Dimensional Arrays) 
+  * Listeler (Lists) 
+  * Sözlükler (Dictionaries) 
+* 8 - Yüksek derece fonksiyonlar (Higher-Order Functions) 
+* 9 - Sınıflar (Classes) ve Obje Tabanlı Programlama (Object-Oriented Programming) 
+* 10 - Numpy, matplotlib, pandas kütüphanelerine giriş 
 
 # Ön hazırlık
 
@@ -351,3 +350,10 @@ while count < limit:
 
 for i in range(10):
   print(i)
+ ```
+# 4 - Fonksiyonlar (Functions)
+
+Matematikte fonksiyonlar tanımlı girdilere has çıktı veren objelerdir. Her ne kadar bu işi programlamada yapan şeyler de "fonksiyon" olarak geçse de fonksiyon kavramı genelde daha geniş bir anlamda kullanılır. Matematikte fonksiyonun çıktı veren objeler olduğunu söylemiştik, programlamada çıktı vermeyen ancak yine belli işleri yapan kod parçalarına da fonksiyon denir. Python'da fonksiyonları iki özelliğe göre, 4 farklı şekilde kategorize edebiliriz.
+
+1. Çıktısı olan ve olmayan fonksiyonlar 
+2. Girdisi olan ve olmayan fonksiyonlar 
