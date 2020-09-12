@@ -196,11 +196,47 @@ Boole aritmetiği esasında lisede öğrendiğimiz mantıksal operatörler ile y
 print( True) # True
 print( False) # False
 
-print("eq op: True == True is " + str(True == True) ) # True
-print("neq op: True != True is " + str(True != True) ) # False
-print("or op: True or False is " + str( True or False) ) # True
-print("or op: False or False is " + str(False or False) ) # False
-print("and op: True and False is " + str( True and False) ) # False
+# boolean expression
+print( True) # True
+print( False) # False
+
+print("OR LOGIC TABLE")
+print( True or False) # True
+print( False or True) # True
+print( True or True) # True
+print( False or False) # False
+
+print("AND LOGIC TABLE")
+print( True and True) # True
+print( False and True) # False
+print( True and False) # False
+print( False and False) # False
+
+print("NOT LOGIC TABLE")
+print( not True) # False
+print( not False) # True
+```
+
+## Karşılaştırma operatörleri
+
+Yukarıda Boolean'lar arasında kullanabileceğimiz ve boolean return'leyen operatörleri görmüştük. Ancak bunlar tek başına programlama yapabilmemiz için yeterli değildir, programlama yaparken çoğu zaman belirli değerleri birbirleri ile kıyaslayıp bu kıyaslamanın doğru değer verip vermediği ile ilgileniriz. Bu nedenle farklı objeler arasındaki ilişkileri incelememizi sağlayan karşılaştırma operatörlerine (comparison operators) ihtiyaç duyarız. Sayılar bazında düşünecek olursak bunlar "küçüktür, eşittir, küçükeşittir vs." gibi operatörlerdir. Ancak herhangi iki obje arasında belirli türden karşılaştırma yapmamızı sağlayan herhangi bir operatör veya fonksiyon da karşılaştırma operatörü olarak değerlendirilebilir. 
+
+ ```python
+# comparison operators
+print("3 == 5", 3 == 5) # False
+print("3 < 5", 3 < 5) # True
+print("3 >= 5", 3 >= 5) # False
+print("3 != 5", 3 != 5) # True
+print("not 3 == 5", not 3 == 5) # True (yukarıdaki ile aynı)
+```
+
+Örneğin aşağıdaki kodda == ifadesini "asda" stringleri için kullanabiliyoruz. < ifadesini iki string arasında kullanabiliyoruz, < ifadesi stringler arasında kullanıldığında sayılar arasında kullanıldığından farklı olarak hangi ifadenin alfabetik olarak daha önde olduğunu kıyaslıyor. "ab" < "bb" yazdığımızda esasında " "ab" alfabetik olarak "bb" den daha öncedir" ifadesinin doğruluk değeri neyse onun değerini, yani True'yu alıyoruz.
+
+
+ ```python
+# comparison operators
+print("\"asda\" == \"asda\": ", ("asda" == "asda") ) # True
+print("\"ab\" < \"bb\":", ("ab" < "bb")) # True
 ```
 
 ## if
