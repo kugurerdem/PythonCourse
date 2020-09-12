@@ -8,6 +8,7 @@
 * [1 - Veri tipleri (Data Types): primitif veri tiplerine (Primitive Data Types) giriş.](#1-veri-tipleri-data-types-primitif-veri-tiplerine-primitive-data-types-giriş)
 * [2 - Koşullar (Conditions)](#2---koşullar-conditions)
 * [3 - Döngüler (Loops)](#3---döngüler-loops)
+* Daha detaylı bir şekilde Stringler
 * 4 - Fonksiyonlar (Functions)
 * 5 - Etki alanı - kapsam (Scoping)
   * Global değişkenler (Global Variables)
