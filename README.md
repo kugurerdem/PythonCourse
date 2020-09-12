@@ -239,9 +239,39 @@ print("\"asda\" == \"asda\": ", ("asda" == "asda") ) # True
 print("\"ab\" < \"bb\":", ("ab" < "bb")) # True
 ```
 
-<b> Not (Escape character ve özel karakterler): </b> 
+## Escape character ve özel karakterler 
 
-Python'da stringlerin " " işaretleri arasında tanımlandığını belirtmiştik. Burada aklınıza şu soru takılabilir, eğer " işaretleri ile string tanımlıyorsak, " işaretinin kendisini içeren bir stringi nasıl yazabiliriz? 
+Python'da stringlerin " " işaretleri arasında tanımlandığını belirtmiştik. Burada aklınıza şu soru takılabilir, eğer " işaretleri ile string tanımlıyorsak, " işaretinin kendisini içeren bir stringi nasıl yazabiliriz? String içerisinde yazdığımız " nın string açma işareti yerine string içerisindeki bir karakter olduğunu belirtmek için \ işareti kullanılır. \ işareti yalnızca " için değil, özel karakterlerin önünde de kullanılır ve genel olarak escape character olarak anılır. Örneğin stringizin içinde " olmasını istiyorsanız aşağıdaki gibi yapabilirsiniz.
+
+ ```python
+print(" \" \" ") # konsolda " " yazar.
+```
+
+\ işaretinin kendisini konsola yazdırmak isterseniz \\ yazabilirsiniz.
+ ```python
+print(" \\ ") # konsolda \ yazar.
+```
+
+Onun haricinde en çok kullanılan özel karakterlerden birisi "\n"dir ve bu string'de satır atlandığı anlamına gelir.
+ ```python
+print("a \n b \n c ") 
+# konsolda aşağıdaki çıktı elde edilir
+# a
+# b
+# c
+```
+
+## Input alma
+
+Program yazarken kullanıcı ile etkileşime geçmek için kullanıcının girdilerini takip etmemiz gerekir. Bunu konsol üzerinden yapmamızın yollarından birisi de input almaktır. Bunu input() metodu ile yapabiliriz, bu metod kullanıcının konsola bir şey yazmasını bekler ve yazdıktan sonra (Enter'a bastıktan sonra) yazılan şeyi string olarak geri döner. Eğer girilen değer sayı ise input()'tan alınan değerin özellikle integer'a veya float'a çevirilmesi gerekir. Bunu casting fonksiyonlarını kullanarak yapabilirsiniz.
+
+ ```python
+PI = 3.14
+print(" yaricapi giriniz")
+r = int( input() )
+print("cevre:", 2 * PI * r) # cevre
+print( "alan:", PI * r * r) # alan
+```
 
 ## if
 
