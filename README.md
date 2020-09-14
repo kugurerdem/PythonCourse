@@ -466,7 +466,7 @@ Bu fonksiyonda da yukarıdaki gibi istediğimiz şeyleri yaptırabiliriz, bu fon
 PI = 3.14
 r = 5
 def area():
-  return 2 * PI * r
+  return PI * r * r
 ```
 
 Dikkat ederseniz tek başına area() fonksiyonunu çağırırsak sonuç hiçbir yerde gözükmez. Çünkü biz yalnızca area fonksiyonunu çalıştırmış ve area fonksiyonundan da bir değer elde etmiş oluruz, area() fonksiyonundan aldığımız değeri konsola yansıtmak için yine print fonksiyonunu kullanmamız gerekir.
@@ -480,6 +480,8 @@ Her ne kadar input fonksiyonunu konsoldan girdi almak amacıyla kullanıyor olsa
 
 ## Girdisi olan ve çıktısı olmayan fonksiyonlar.
 
+Bu fonksiyonlar fonksiyon tanımlanırken belli parametreler alıp bu parametrelere göre belirli operasyonlar yapar.
+
 ```python
 def welcome(name, surname):
   print("Welcome", name, surname)
@@ -491,9 +493,11 @@ welcome(name, surname)
 
 ## Girdisi olan ve çıktısı olan fonksiyonlar.
 
+Bu fonksiyonlar fonksiyon tanımlanırken belli parametreler alıp bu parametrelere göre belirli bir değeri geri döner.
+
 ```python
 def area(r):
-  return 2 * PI * r
+  return PI * r * r
  
 print( area( 5))
 print( area( 10))
@@ -502,3 +506,4 @@ print( area( 10))
 ## Varsayılan Parametreler (Default Parameters)
 
 ## Overloading
+
