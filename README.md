@@ -7,6 +7,7 @@
 * [Merhaba Dünya!](#merhaba-dünya) 
 * [1 - Veri tipleri (Data Types): primitif veri tiplerine (Primitive Data Types) giriş.](#1-veri-tipleri-data-types-primitif-veri-tiplerine-primitive-data-types-giriş)
 * [2 - Koşullar (Conditions)](#2---koşullar-conditions)
+* 3.5 - String Operasyonları
 * [3 - Döngüler (Loops)](#3---döngüler-loops)
 * 4 - Fonksiyonlar (Functions) 
 * 5 - Etki alanı - kapsam (Scoping) 
@@ -429,7 +430,40 @@ print( kelime[ ::-1] ) # -> abahrem
 
 # 4 - Fonksiyonlar (Functions)
 
-Matematikte fonksiyonlar tanımlı girdilere has çıktı veren objelerdir. Her ne kadar bu işi programlamada yapan şeyler de "fonksiyon" olarak geçse de fonksiyon kavramı genelde daha geniş bir anlamda kullanılır. Matematikte fonksiyonun çıktı veren objeler olduğunu söylemiştik, programlamada çıktı vermeyen ancak yine belli işleri yapan kod parçalarına da fonksiyon denir. Python'da fonksiyonları iki özelliğe göre, 4 farklı şekilde kategorize edebiliriz.
+Matematikte fonksiyonlar tanımlı girdilere has çıktı veren objelerdir. Her ne kadar bu işi programlamada yapan şeyler de "fonksiyon" olarak geçse de fonksiyon kavramı genelde daha geniş bir anlamda kullanılır. Matematikte fonksiyonun çıktı veren objeler olduğunu söylemiştik, programlamada çıktı vermeyen ancak yine belli işleri yapan kod parçalarına da fonksiyon denir. Python'da fonksiyonları iki özelliğe göre, 4 farklı şekilde kategorize edebiliriz. Fonksiyonları kategorize ederken baktığımız özellikle bir çıktısının olup olmaması ve bir girdisinin olup olmamasıdır.
 
-1. Çıktısı olan ve olmayan fonksiyonlar 
-2. Girdisi olan ve olmayan fonksiyonlar 
+## Girdisi olmayan ve çıktısı olmayan fonksiyonlar.
+
+Programlama yaparken zaman zaman bazı işleri tekrarlamamız gerekir. Eğer tekrarladığımız işlem tamamen diğer değişkenlerden bağımsız olarak hep aynı şekilde yapılıyor ise bu durumda özünde yaptığımız şey yaptığımız işlemi tekrarlayan kodu tekrar tekrar yazmaktır. Ancak fark edileceği üzere bu oldukça verimsiz ve tekrara dayalı bir yöntemdir. Bu durumda istediğimiz kod parçasını doğrudan çalıştıracak, bir nevi makro işlevi gören fonksiyonlar tanımlayabiliriz. Bu durumda aynı ve uzun kodu defalarca tekrar tekrar yazmaktan kurtulmuş oluruz.
+
+Sentaks:
+```python
+def fonksiyon_ismi():
+    ifadeler
+```
+
+Örnek:
+```python
+def print_calculations():
+    print("Sayi girin")
+    a = int( input())
+    print("Sayi girin")
+    b = int( input())
+    print("a * b", a * b)
+    print("a - b", a - b)
+    print("a + b", a + b)
+    print("a / b", a / b)
+    
+print_calculations()
+print_calculations()
+```
+
+## Girdisi olmayan ve çıktısı olan fonksiyonlar.
+
+## Girdisi olan ve çıktısı olmayan fonksiyonlar.
+
+## Girdisi olan ve çıktısı olan fonksiyonlar.
+
+## Varsayılan Parametreler (Default Parameters)
+
+## Overloading
