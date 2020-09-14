@@ -341,7 +341,7 @@ range fonksiyonu range objesi döner. Range objesini bir çeşit liste gibi dü�
 
 Örneğin range(10) fonksiyonunun içerisinde 0'dan 9'a kadar olan değerleri taşıyan bir Range objesi returnlediğini söyleyebiliriz. For döngümüzdeki i değişkenimiz de teker teker bu objenin içindeki verilerin değerini alır. range fonksiyonunu kullanabileceğimiz farklı formlar vardır, bunlar aşağıdaki gibidir.
 
-<b> range(n) </b>
+* <b> range(n) </b>
 
 İçerisinde 0'dan n'e kadar (n dahil değil) olacak şekildeki tam sayıları (1,2,3..., n-1) temsil edecek bir Range objesi returnler.
 
@@ -349,7 +349,7 @@ range fonksiyonu range objesi döner. Range objesini bir çeşit liste gibi dü�
 
 range(5) -> 0,1,2,3,4
 
-<b> range(start, end) </b> 
+* <b> range(start, end) </b> 
 
 İçerisinde start'tan end'e kadar (end dahil değil) olacak şekildeki tam sayıları (start, start + 1, start + 2, .., end-1) temsil edecek bir Range objesi returnler.
 
@@ -357,7 +357,7 @@ range(5) -> 0,1,2,3,4
 
 range(5, 10) -> 5,6,7,8,9
 
-<b> range(start, end, inc) </b>
+* <b> range(start, end, inc) </b>
 İçerisinde start'tan end'e kadar (end dahil değil) olacak şekildeki tam sayıları inc değeri kadar arttıra arttıra (start, start + inc, start + 2 * inc, ..) temsil edecek bir Range objesi returnler.
 
 Örnek:
@@ -365,6 +365,18 @@ range(5, 10) -> 5,6,7,8,9
 range(5, 10, 2) -> 5,7,9
 
 range(10, 5, -1) -> 10,9,8,7,6
+
+## Önemli Not
+
+Şimdilik yalnızca Range objesi üzerinden iterasyon yaptık ancak belirli bir veri listesine tekabül eden veri yapılarının çoğunda da "for i in ..." sentaksı kullanılabilir. Örneğin bir string'i itere edecek olursak i teker teker string'in içindeki değerleri alır. 
+
+```python
+my_string = "merhaba"
+for ch in my_string:
+    print(ch)
+```
+
+Esasında Iterable olan, yani itere edilebilir olan her objeyi for döngüsünde itere ettirebiliriz. String, Range objesi, Listeler vs. itere edilebilir objelerdir.
 
 ## While ve For Loop Örneği
 
@@ -380,6 +392,41 @@ while count < limit:
 for i in range(10):
   print(i)
  ```
+ 
+# 3.5 String operasyonları
+
+## String uzunluğu
+Bir stringin kaç tane karakterden oluştuğunu bulmak için len fonksiyonunu kullanabiliriz.
+
+ ```python
+name = "ugur"
+print("İsim uzunluğu", len( name)) # -> 4
+ ```
+ 
+## String içerisindeki bir karaktere ulaşmak için 
+Genel olarak bir string'in i. karakterine ulaşmak istiyorsak bunu string ifadesinin sağına [i-1] koyarak yaparız. Başka bir değiş ile 3. karaktere ulaşmak istiyorsak string ifadesinin sağına [2] koyarız.
+
+ ```python
+name = "ugur"
+print("1. karakter", name[0]) # -> u
+print("Son karakter", name[len(name) - 1]) # -> r
+ ```
+ 
+## Bölme (Slicing)
+Bölme (Slicing) operasyonları bir string'in bölünmesi/dilimlenmesinde kullanılır. Bu sayede bir string'in yalnızca belirli bir kısmından diğer kısmına kadar olan kısmını vs. ile ilgilenebiliriz.
+
+* string[start : end]
+ ```python
+kelime = "merhaba"
+print( kelime[3 : 6] ) # -> "hab"
+ ```
+* string[start : end : inc]
+ ```python
+kelime = "merhaba"
+print( kelime[0 : len(kelime) - 1 : 2] ) # -> "mraa"
+print( kelime[ ::-1] ) # -> abahrem
+ ```
+
 # 4 - Fonksiyonlar (Functions)
 
 Matematikte fonksiyonlar tanımlı girdilere has çıktı veren objelerdir. Her ne kadar bu işi programlamada yapan şeyler de "fonksiyon" olarak geçse de fonksiyon kavramı genelde daha geniş bir anlamda kullanılır. Matematikte fonksiyonun çıktı veren objeler olduğunu söylemiştik, programlamada çıktı vermeyen ancak yine belli işleri yapan kod parçalarına da fonksiyon denir. Python'da fonksiyonları iki özelliğe göre, 4 farklı şekilde kategorize edebiliriz.
