@@ -445,14 +445,14 @@ def fonksiyon_ismi():
 Örnek:
 ```python
 def print_calculations():
-    print("Sayi girin")
-    a = int( input())
-    print("Sayi girin")
-    b = int( input())
-    print("a * b", a * b)
-    print("a - b", a - b)
-    print("a + b", a + b)
-    print("a / b", a / b)
+  print("Sayi girin")
+  a = int( input())
+  print("Sayi girin")
+  b = int( input())
+  print("a * b", a * b)
+  print("a - b", a - b)
+  print("a + b", a + b)
+  print("a / b", a / b)
     
 print_calculations()
 print_calculations()
@@ -460,9 +460,41 @@ print_calculations()
 
 ## Girdisi olmayan ve çıktısı olan fonksiyonlar.
 
+Bu fonksiyonda da yukarıdaki gibi istediğimiz şeyleri yaptırabiliriz, bu fonksiyon türünün üstteki fonksiyon türünden tek farkı fonksiyonu çağırdığımız yerde fonksiyonun kendi yerine başka bir geçirmesidir. Bununla ne kast ediyoruz? Aşağıdaki şekilde area() fonksiyonunu tanımladıktan sonra ne zaman area() yazsak bu fonksiyon çalışacak ve area()'nın yerinde return'lenen ifade varmış gibi olacak.
+
+```python
+PI = 3.14
+r = 5
+def area():
+  return 2 * PI * r
+```
+
+Dikkat ederseniz tek başına area() fonksiyonunu çağırırsak sonuç hiçbir yerde gözükmez. Çünkü biz yalnızca area fonksiyonunu çalıştırmış ve area fonksiyonundan da bir değer elde etmiş oluruz, area() fonksiyonundan aldığımız değeri konsola yansıtmak için yine print fonksiyonunu kullanmamız gerekir.
+
+```python
+area() # konsola bir şey yazdırmaz
+print( area() ) # konsola alani yazdirir
+```
+
+Her ne kadar input fonksiyonunu konsoldan girdi almak amacıyla kullanıyor olsak da input() fonksiyonu da buna verebileceğimiz örneklerden birisidir. Fonksiyonun kendisi bir parametre (girdi) almaz, ve kullanıcının konsola girdiği ifadeyi string cinsinden bize geri verir.
+
 ## Girdisi olan ve çıktısı olmayan fonksiyonlar.
 
+```python
+def welcome(name, surname):
+  print("Welcome", name, surname)
+
+name = input("What is your name?")
+surname = input("What is your surname?")
+welcome(name, surname)
+```
+
 ## Girdisi olan ve çıktısı olan fonksiyonlar.
+
+```python
+def area(r):
+  return 2 * PI * r
+```
 
 ## Varsayılan Parametreler (Default Parameters)
 
