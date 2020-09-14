@@ -7,9 +7,9 @@
 * [Merhaba Dünya!](#merhaba-dünya) 
 * [1 - Veri tipleri (Data Types): primitif veri tiplerine (Primitive Data Types) giriş.](#1-veri-tipleri-data-types-primitif-veri-tiplerine-primitive-data-types-giriş)
 * [2 - Koşullar (Conditions)](#2---koşullar-conditions)
-* 3.5 - String Operasyonları
+* [3.5 - String Operasyonları](#35-string-operasyonları)
 * [3 - Döngüler (Loops)](#3---döngüler-loops)
-* 4 - Fonksiyonlar (Functions) 
+* [4 - Fonksiyonlar (Functions)](#4---fonksiyonlar-functions)
 * 5 - Etki alanı - kapsam (Scoping) 
   * Global değişkenler (Global Variables) 
 * 6 - Modüller (Modules), dosyalar (Files) 
@@ -494,6 +494,9 @@ welcome(name, surname)
 ```python
 def area(r):
   return 2 * PI * r
+ 
+print( area( 5))
+print( area( 10))
 ```
 
 ## Varsayılan Parametreler (Default Parameters)
