@@ -337,7 +337,36 @@ yukarıdaki ifadede boolean_değeri'nin değeri True olduğu müddetçe while lo
 
 yukarıdaki ifadede i değeri iterasyon_sayisi'na ulaşak şekilde her bir iterasyon sonunda değerini 1 arttırır ve değeri iterasyon_sayisi kısmındaki değere ulaştığında iterasyon durur. 
 
-## Örnek
+range fonksiyonu range objesi döner. Range objesini bir çeşit liste gibi düşünebilirsiniz, içerisinde kaydettiği veriler bakımından yapısı listelere oldukça benzer ama özünde range objesi, listelerden farklıdır. Yine de range fonksiyonun ürettiği range objesini anlama açısından verileri liste şeklinde düşünmekte ve itere edilen değerlerin bu liste üzerinden yapılıyormuş gibi düşünmekte sakınca yoktur. 
+
+Örneğin range(10) fonksiyonunun içerisinde 0'dan 9'a kadar olan değerleri taşıyan bir Range objesi returnlediğini söyleyebiliriz. For döngümüzdeki i değişkenimiz de teker teker bu objenin içindeki verilerin değerini alır. range fonksiyonunu kullanabileceğimiz farklı formlar vardır, bunlar aşağıdaki gibidir.
+
+<b> range(n) </b>
+
+İçerisinde 0'dan n'e kadar (n dahil değil) olacak şekildeki tam sayıları (1,2,3..., n-1) temsil edecek bir Range objesi returnler.
+
+Örnek: 
+
+range(5) -> 0,1,2,3,4
+
+<b> range(start, end) </b> 
+
+İçerisinde start'tan end'e kadar (end dahil değil) olacak şekildeki tam sayıları (start, start + 1, start + 2, .., end-1) temsil edecek bir Range objesi returnler.
+
+Örnek: 
+
+range(5, 10) -> 5,6,7,8,9
+
+<b> range(start, end, inc) </b>
+İçerisinde start'tan end'e kadar (end dahil değil) olacak şekildeki tam sayıları inc değeri kadar arttıra arttıra (start, start + inc, start + 2 * inc, ..) temsil edecek bir Range objesi returnler.
+
+Örnek:
+
+range(5, 10, 2) -> 5,7,9
+
+range(10, 5, -1) -> 10,9,8,7,6
+
+## While ve For Loop Örneği
 
 Aşağıda 1'den 10'a kadar sayan, tam olarak aynı işi yapan while ve for döngülerini görüyoruz. Çoğu durumda while ve for döngüleri dönüşümlü olarak kullanılabilir.
 
