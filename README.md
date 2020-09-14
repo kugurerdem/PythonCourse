@@ -341,7 +341,7 @@ range fonksiyonu range objesi döner. Range objesini bir çeşit liste gibi dü�
 
 Örneğin range(10) fonksiyonunun içerisinde 0'dan 9'a kadar olan değerleri taşıyan bir Range objesi returnlediğini söyleyebiliriz. For döngümüzdeki i değişkenimiz de teker teker bu objenin içindeki verilerin değerini alır. range fonksiyonunu kullanabileceğimiz farklı formlar vardır, bunlar aşağıdaki gibidir.
 
-* <b> range(n) </b>
+### range(n)
 
 İçerisinde 0'dan n'e kadar (n dahil değil) olacak şekildeki tam sayıları (1,2,3..., n-1) temsil edecek bir Range objesi returnler.
 
@@ -349,7 +349,7 @@ range fonksiyonu range objesi döner. Range objesini bir çeşit liste gibi dü�
 
 range(5) -> 0,1,2,3,4
 
-* <b> range(start, end) </b> 
+### range(start, end) 
 
 İçerisinde start'tan end'e kadar (end dahil değil) olacak şekildeki tam sayıları (start, start + 1, start + 2, .., end-1) temsil edecek bir Range objesi returnler.
 
@@ -357,7 +357,7 @@ range(5) -> 0,1,2,3,4
 
 range(5, 10) -> 5,6,7,8,9
 
-* <b> range(start, end, inc) </b>
+### range(start, end, inc)
 İçerisinde start'tan end'e kadar (end dahil değil) olacak şekildeki tam sayıları inc değeri kadar arttıra arttıra (start, start + inc, start + 2 * inc, ..) temsil edecek bir Range objesi returnler.
 
 Örnek:
@@ -415,12 +415,12 @@ print("Son karakter", name[len(name) - 1]) # -> r
 ## Bölme (Slicing)
 Bölme (Slicing) operasyonları bir string'in bölünmesi/dilimlenmesinde kullanılır. Bu sayede bir string'in yalnızca belirli bir kısmından diğer kısmına kadar olan kısmını vs. ile ilgilenebiliriz.
 
-* string[start : end]
+### string[start : end]
  ```python
 kelime = "merhaba"
 print( kelime[3 : 6] ) # -> "hab"
  ```
-* string[start : end : inc]
+### string[start : end : inc]
  ```python
 kelime = "merhaba"
 print( kelime[0 : len(kelime) - 1 : 2] ) # -> "mraa"
