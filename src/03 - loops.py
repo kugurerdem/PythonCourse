@@ -169,35 +169,70 @@ for i in range(1, n + 1):
 # question07: DNA eşleme
 # verilen bir DNA kodunun eşleniğini veren kod
 # A ile T, C ile G eşleşmeli.
-DNA = 'ACTAGAAGACTG"
+print("--Q7--")
+# YOL 1
+DNA = 'ACTAGAAGACTG'
 DNA_es = ''
-for i in range( len(DNA)):
-    char = DNA[i]
-    if( char == 'A'):
-        DNA_es = DNA_es + 'T'
-    elif( char == 'T'):
-        DNA_es = DNA_es + 'A'
-    elif( char == 'C'):
-        DNA_es = DNA_es + 'G'
-    elif( char == 'G'):
-        DNA_es = DNA_es + 'C'
 
-print("DNA", DNA)
-print("DNA_es", DNA_es)
+for i in range( len(DNA)):
+  char = DNA[i]
+  if( char == 'A'):
+    DNA_es = DNA_es + 'T'
+  elif( char == 'T'):
+    DNA_es = DNA_es + 'A'
+  elif( char == 'C'):
+    DNA_es = DNA_es + 'G'
+  elif( char == 'G'):
+    DNA_es = DNA_es + 'C'
+
+print("DNA\n", DNA)
+print("DNA_es\n", DNA_es)
+
+# YOL 2 (Python'a has)
+print("---")
+DNA = 'ACTAGAAGACTG'
+DNA_es = ''
+
+for char in DNA:
+  if( char == 'A'):
+    DNA_es = DNA_es + 'T'
+  elif( char == 'T'):
+    DNA_es = DNA_es + 'A'
+  elif( char == 'C'):
+    DNA_es = DNA_es + 'G'
+  elif( char == 'G'):
+    DNA_es = DNA_es + 'C'
+
+print("DNA\n", DNA)
+print("DNA_es\n", DNA_es)
 
 # question08: Aşağıdaki ağacı veren kodu yaz
+print("--Q8--")
 '''
-   *
-  ***
- *****
-*******
+   * - > 1. satır: 3 boşluk 1 yıldız
+  *** - > 2. satır: 2 boşluk 3 yıldız
+ ***** - > 3. satır: 1 boşluk 5 yıldız
+******* - > 4. satır: 0 boşluk 7 yıldız
+
+i. satırdayken: n - i boşluk
+              : (i - 1) * 2 + 1
+                
 '''
 
-n = 10
-line = "*"
+# YOL 1
+n = 4
 for i in range(n):
-  space = ""
-  for j in range(n - i):
-    space = space + " "
-  print( space + line)
-  line = line +  ("*" * 2)
+  # satır yazdırmamız lazım
+  for j in range(n - i - 1):
+    print(" ", end="")
+  for j in range(2 * i + 1):
+    print("*", end="")
+  print()
+
+# YOL 2 (Berkay'ın kodu) (Python'a has yöntem)
+space = n - 1
+star = 1
+for i in range(n):
+  print( " " * space + "*" * star)
+  space = space - 1
+  star = star + 2
